@@ -16,20 +16,17 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v4
-    - run: ls
     - run: cd starter-frontend
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: ls
     - run: cd starter-frontend
-    - run: ls
     - name: Install dependencies
       run: cd starter-frontend && npm install
     - run: cd starter-frontend && npm run build
