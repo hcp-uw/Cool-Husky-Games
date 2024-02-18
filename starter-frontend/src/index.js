@@ -32,12 +32,11 @@ console.log('testRoute', testRoute);
 // add all routes to this children array for the route tree
 const routeTree = rootRoute.addChildren([indexRoute, testRoute]);
 
-// use hash-based routing because of github pages
-const memoryHistory = createBrowserHistory();
+const browserHistory = createBrowserHistory();
 
 const router = createRouter({
   routeTree,
-  history: memoryHistory,
+  history: browserHistory,
   notFoundComponent: () => <NotFoundPage />
 });
 
