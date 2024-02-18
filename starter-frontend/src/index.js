@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import * as bootstrap from 'bootstrap';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import HomePage from './Home';
-import { RouterProvider, createMemoryHistory, createRootRoute, createRoute, createRouter } from "@tanstack/react-router"
+import HomePage from './pages/Home';
+import { RouterProvider, createBrowserHistory, createHashHistory, createMemoryHistory, createRootRoute, createRoute, createRouter } from "@tanstack/react-router"
 import Layout from './Layout';
 import NotFoundPage from './NotFoundPage';
 
@@ -20,17 +20,25 @@ const indexRoute = createRoute({
   component: () => <HomePage />
 });
 
+const testRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/test',
+  component: () => <h1>Test</h1>
+})
+
+console.log('indexRoute', indexRoute);
+console.log('testRoute', testRoute);
+
 // add all routes to this children array for the route tree
-const routeTree = rootRoute.addChildren([indexRoute]);
+const routeTree = rootRoute.addChildren([indexRoute, testRoute]);
 
 // use hash-based routing because of github pages
-const memoryHistory = createMemoryHistory({
-  initialEntries: ["/"]
-});
+const memoryHistory = createBrowserHistory();
 
 const router = createRouter({
   routeTree,
-  history: memoryHistory
+  history: memoryHistory,
+  notFoundComponent: () => <NotFoundPage />
 });
 
 

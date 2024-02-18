@@ -4,8 +4,8 @@ import backgroundImage from "./cool-background.png";
 function HomePage() {
   return (
     <>
-      <main className='d-flex flex-column flex-md-row h-screen vw-100 vh-100'>
-        <img src={backgroundImage} alt='background image' className='z-n1 position-absolute vh-100 vw-100' />
+      <main className='d-flex flex-column flex-md-row w-100 vh-100'>
+        <img src={backgroundImage} alt='background' className='z-n1 position-absolute vh-100 w-100' />
         <section className='w-50 m-5 z-3'>
           <h1 className='display-4 mt-4'>Bringing that *dawg* to games.</h1>
           <h2 className='display-6 mt-2'>And making them cool, at that.</h2>
