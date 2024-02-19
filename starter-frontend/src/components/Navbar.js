@@ -1,28 +1,29 @@
+import { Link } from "@tanstack/react-router"
 export default function Navbar() {
     return (
         <>
             <nav style={{ backgroundColor: "#CBC3E3", }} className="navbar navbar-expand-lg sticky-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/">Cool Husky Games</a>
+                    <Link className="navbar-brand" to="/">Cool Husky Games</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/games">Games</a>
+                                <Link className="nav-link active" aria-current="page" to="/games">Games</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/learning">Learning</a>
+                                <Link className="nav-link" to="/learning">Learning</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className="nav-link dropdown-toggle" to="/about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     About
-                                </a>
+                                </Link>
                                 <ul className="dropdown-menu transit">
-                                    <li><a className="dropdown-item" href="/about/team">The Team</a></li>
-                                    <li><a className="dropdown-item" href="/about/mission">Our Mission</a></li>
-                                    <li><a className="dropdown-item" href="/about/hcp">Husky Coding Project</a></li>
+                                    <li><Link className="dropdown-item" to="/about/team">The Team</Link></li>
+                                    <li><Link className="dropdown-item" to="/about/mission">Our Mission</Link></li>
+                                    <li><Link className="dropdown-item" to="/about/hcp">Husky Coding Project</Link></li>
                                 </ul>
                             </li>
                         </ul>

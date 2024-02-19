@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import backgroundImage from "./cool-background.png";
+import { Link } from '@tanstack/react-router';
 
 function HomePage() {
   return (
@@ -9,7 +10,7 @@ function HomePage() {
         <section className='w-50 m-5 z-3'>
           <h1 className='display-4 mt-4'>Bringing that *dawg* to games.</h1>
           <h2 className='display-6 mt-2'>And making them cool, at that.</h2>
-          <a href='/games' role='button' className='btn btn-primary mt-2'>Get Started &rarr;</a>
+          <Link to='/games' role='button' className='btn btn-primary mt-2'>Get Started &rarr;</Link>
         </section>
       </main>
     </>

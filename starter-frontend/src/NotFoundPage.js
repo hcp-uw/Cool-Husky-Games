@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Navbar from "./components/Navbar";
 
 export default function NotFoundPage() {
@@ -7,7 +8,7 @@ export default function NotFoundPage() {
             <h1 className="display-3 text-center mt-6">
                 Uh oh! The path you visited was not found.
             </h1>
-            <a href="/">Click here to go home.</a>
+            <Link to="/">Click here to go home.</Link>
         </main>
         </>
     )
