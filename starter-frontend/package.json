@@ -1,7 +1,6 @@
 {
   "name": "starter-project",
   "version": "0.1.0",
-  "homepage": "https://hcp-uw.github.io/cool-husky-games",
   "private": true,
   "dependencies": {
     "@tanstack/react-router": "^1.16.5",
