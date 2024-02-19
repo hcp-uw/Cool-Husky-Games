@@ -26,8 +26,8 @@ const testRoute = createRoute({
   component: () => <h1>Test</h1>
 })
 
-console.log('indexRoute', indexRoute);
-console.log('testRoute', testRoute);
+// console.log('indexRoute', indexRoute);
+// console.log('testRoute', testRoute);
 
 // add all routes to this children array for the route tree
 const routeTree = rootRoute.addChildren([indexRoute, testRoute]);
@@ -35,6 +35,7 @@ const routeTree = rootRoute.addChildren([indexRoute, testRoute]);
 const browserHistory = createBrowserHistory();
 
 const router = createRouter({
+  basepath: '/cool-husky-games',
   routeTree,
   history: browserHistory,
   notFoundComponent: () => <NotFoundPage />
