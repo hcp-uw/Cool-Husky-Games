@@ -2,6 +2,14 @@
 
 A simple template repository with a React frontend and Express backend for quickly starting new full-stack projects.
 
+# Notes for deploying to AWS
+The <script> tags in the head of the `public/index.html` and `public/404.html` files need to be removed, as they are GitHub pages hack specific.
+
+The router also assumes a `basepath` of `/cool-husky-games` in the `createRouter` function call in `src/index.js`. This works because of how GitHub Pages is set up, but on AWS the website will be
+served from the root path and doesn't have the `/cool-husky-games` subpath, so that specific line will need to be removed as well.
+
+In addition, the vite.config.js file has a basename of `/cool-husky-games` as well, and that line can be removed when deploying to AWS.
+
 ## Prerequisites ‼️
 
 To use this template, you need to have the following installed on your machine:
