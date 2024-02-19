@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false && react-scripts build",
+    "build": "CI=false PUBLIC_URL=https://hcp-uw.github.io/cool-husky-games/ && react-scripts build",
+    "build-cloudflare": "CI=false PUBLIC_URL=/ && react-scripts build"
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
