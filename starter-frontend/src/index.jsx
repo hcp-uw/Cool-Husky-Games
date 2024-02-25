@@ -35,7 +35,7 @@ const routeTree = rootRoute.addChildren([indexRoute, testRoute]);
 const browserHistory = createBrowserHistory();
 
 const router = createRouter({
-  // basepath: '/cool-husky-games',
+  basepath: '/cool-husky-games',
   routeTree,
   history: browserHistory,
   notFoundComponent: () => <NotFoundPage />
