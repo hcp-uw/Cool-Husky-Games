@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Husky Games</title>
+    <script>
+      window.addEventListener("beforeunload", function (event) {
+        event.stopImmediatePropagation();
+      });
+    </script>
+  </head>
+  <!-- Hack to prevent white background flash when animating between pages -->
+  <body style="background-color: #39275b !important">
+    <div style="background-color: #39275b !important" id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
