@@ -21,8 +21,8 @@ function GameRoute() {
       const req = await fetch(`/uploads/${game}/index.html`);
       const text = await req.text();
       console.log("text", text);
-      console.log(req.ok && text.includes("pythons.js"));
-      return req.ok && (text.includes("pythons.js") || text.includes("canvas"));
+      // console.log(req.ok && text.includes("pythons.js"));
+      return req.ok;
     },
   });
 
