@@ -22,7 +22,7 @@ function GameRoute() {
       const text = await req.text();
       console.log("text", text);
       console.log(req.ok && text.includes("pythons.js"));
-      return req.ok && text.includes("pythons.js");
+      return req.ok && (text.includes("pythons.js") || text.includes("canvas"));
     },
   });
 
