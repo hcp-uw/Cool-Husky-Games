@@ -9,7 +9,7 @@ function GetTopPicks() {
     {
       id: "snake",
       name: "Husky Snake",
-      authors: "Additya, Anthony",
+      authors: "Aaditya, Anthony",
       img: "/snake.png",
     },
     {
@@ -19,9 +19,9 @@ function GetTopPicks() {
       img: "/pong.png",
     },
     {
-      id: "tictactoe",
-      name: "Husky Tic Tac Toe",
-      authors: "Don, Kaid’dub",
+      id: "wordle",
+      name: "Husky Wordle",
+      authors: "Aaditya",
       img: "/tictactoe.png",
     },
   ];
