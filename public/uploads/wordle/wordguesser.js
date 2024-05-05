@@ -18,6 +18,7 @@ async function init() {
   setLoading(isLoading);
 
   function addLetter(letter) {
+    console.log(letter);
     if (currGuess.length < ANSWER_LENGTH) {
       // Add letter to the end
       currGuess += letter;
